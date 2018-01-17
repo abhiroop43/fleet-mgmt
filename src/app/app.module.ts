@@ -1,16 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatMenuModule,
+  MatIconModule,
+  MatTableModule
+} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { DriversComponent } from './drivers/drivers.component';
+import { DriverDetailComponent } from './drivers/driver-detail/driver-detail.component';
+import { DriverEditComponent } from './drivers/driver-edit/driver-edit.component';
+import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail.component';
+import { VehicleEditComponent } from './vehicles/vehicle-edit/vehicle-edit.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VehiclesComponent,
+    DriversComponent,
+    DriverDetailComponent,
+    DriverEditComponent,
+    VehicleDetailComponent,
+    VehicleEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FlexLayoutModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
