@@ -18,6 +18,8 @@ import { DriverDetailComponent } from './drivers/driver-detail/driver-detail.com
 import { DriverEditComponent } from './drivers/driver-edit/driver-edit.component';
 import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail.component';
 import { VehicleEditComponent } from './vehicles/vehicle-edit/vehicle-edit.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { VehicleEditComponent } from './vehicles/vehicle-edit/vehicle-edit.compo
     DriverDetailComponent,
     DriverEditComponent,
     VehicleDetailComponent,
-    VehicleEditComponent
+    VehicleEditComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
