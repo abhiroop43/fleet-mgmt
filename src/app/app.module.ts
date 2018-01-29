@@ -20,6 +20,8 @@ import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail
 import { VehicleEditComponent } from './vehicles/vehicle-edit/vehicle-edit.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { AuthService } from './auth/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { SignupComponent } from './auth/signup/signup.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     FlexLayoutModule,
     MatToolbarModule,
@@ -45,7 +48,7 @@ import { SignupComponent } from './auth/signup/signup.component';
     MatIconModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
