@@ -6,16 +6,17 @@ import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail
 import { VehicleEditComponent } from './vehicles/vehicle-edit/vehicle-edit.component';
 import { DriverDetailComponent } from './drivers/driver-detail/driver-detail.component';
 import { DriverEditComponent } from './drivers/driver-edit/driver-edit.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
     { path: 'vehicles', component: VehiclesComponent },
     { path: 'vehicles/:id', component: VehicleDetailComponent },
-    { path: 'vehicles/:id/edit', component: VehicleEditComponent },
-    { path: 'vehicles/new', component: VehicleEditComponent },
+    { path: 'vehicles/:id/edit', component: VehicleEditComponent, canActivate: [AuthGuardService] },
+    { path: 'vehicles/new', component: VehicleEditComponent, canActivate: [AuthGuardService] },
     { path: 'drivers', component: DriversComponent },
     { path: 'drivers/:id', component: DriverDetailComponent },
-    { path: 'drivers/:id/edit', component: DriverEditComponent },
-    { path: 'drivers/new', component: DriverEditComponent },
+    { path: 'drivers/:id/edit', component: DriverEditComponent, canActivate: [AuthGuardService] },
+    { path: 'drivers/new', component: DriverEditComponent, canActivate: [AuthGuardService] },
     {
         path: '',
         redirectTo: '/vehicles',
