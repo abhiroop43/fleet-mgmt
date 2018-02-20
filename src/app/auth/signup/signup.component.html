@@ -1,3 +1,34 @@
-<p>
-  signup works!
-</p>
+<form [formGroup]="frmRegister">
+  <div fxFlexOffset="50px" fxLayout="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0" fxFlex="100%">
+    <div fxLayout="column">
+
+      <div>
+        <mat-form-field hideRequiredMarker="false" floatLabel="auto">
+          <input matInput placeholder="Email" required formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field hideRequiredMarker="false" floatLabel="auto">
+          <input type="password" matInput placeholder="Password" required formControlName="password">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field hideRequiredMarker="false" floatLabel="auto">
+          <input type="password" matInput placeholder="Confirm Password" required formControlName="confirmPassword">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div fxLayout="row">
+      <div fxFlex="8%">
+        <button type="submit" mat-raised-button color="primary" (click)="submitForm()">Register</button>
+      </div>
+      <div fxFlex="8%">
+        <button type="reset" mat-raised-button>Cancel</button>
+      </div>
+    </div>
+  </div>
+</form>

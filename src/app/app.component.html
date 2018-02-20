@@ -9,6 +9,7 @@
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
     <button mat-button routerLink="/products">Vehicles</button>
     <button mat-button routerLink="/dashboard">Drivers</button>
+    <button mat-button routerLink="/signin">Sign In</button>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
     <mat-icon>menu</mat-icon>
@@ -23,4 +24,4 @@
 
 <router-outlet></router-outlet>
 
-<button mat-button color="primary" (click)="signIn()">Sign in</button>
+<!-- <button mat-button color="primary" (click)="signIn()">Sign in</button> -->

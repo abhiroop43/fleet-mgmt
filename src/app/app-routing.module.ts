@@ -7,6 +7,8 @@ import { VehicleEditComponent } from './vehicles/vehicle-edit/vehicle-edit.compo
 import { DriverDetailComponent } from './drivers/driver-detail/driver-detail.component';
 import { DriverEditComponent } from './drivers/driver-edit/driver-edit.component';
 import { AuthGuardService } from './auth/auth-guard.service';
+import { SigninComponent } from './auth/signin/signin.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 const appRoutes: Routes = [
     { path: 'vehicles', component: VehiclesComponent },
@@ -17,6 +19,8 @@ const appRoutes: Routes = [
     { path: 'drivers/:id', component: DriverDetailComponent },
     { path: 'drivers/:id/edit', component: DriverEditComponent, canActivate: [AuthGuardService] },
     { path: 'drivers/new', component: DriverEditComponent, canActivate: [AuthGuardService] },
+    { path: 'signin', component: SigninComponent },
+    { path: 'signup', component: SignupComponent },
     {
         path: '',
         redirectTo: '/vehicles',

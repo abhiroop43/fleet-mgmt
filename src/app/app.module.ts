@@ -10,7 +10,9 @@ import {
   MatButtonModule,
   MatMenuModule,
   MatIconModule,
-  MatTableModule
+  MatTableModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { VehiclesComponent } from './vehicles/vehicles.component';
@@ -23,6 +25,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/auth-guard.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,12 +44,15 @@ import { AuthGuardService } from './auth/auth-guard.service';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
