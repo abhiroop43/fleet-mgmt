@@ -7,9 +7,9 @@
   <!-- This fills the remaining space of the current row -->
   <span class="fill-remaining-space"></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <button mat-button routerLink="/products">Vehicles</button>
-    <button mat-button routerLink="/dashboard">Drivers</button>
-    <button mat-button routerLink="/signin">Sign In</button>
+    <button mat-button routerLink="/vehicles">Vehicles</button>
+    <button mat-button routerLink="/drivers">Drivers</button>
+    <button mat-button routerLink="/signin" *ngIf="!isAuthenticated">Sign In</button>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
     <mat-icon>menu</mat-icon>
@@ -17,8 +17,9 @@
 
 </mat-toolbar>
 <mat-menu x-position="before" #menu="matMenu">
-  <button mat-menu-item routerLink="/products">Vehicles</button>
-  <button mat-menu-item routerLink="/dashboard">Drivers</button>
+  <button mat-menu-item routerLink="/vehicles">Vehicles</button>
+  <button mat-menu-item routerLink="/drivers">Drivers</button>
+  <button mat-button routerLink="/signin" *ngIf="!isAuthenticated">Sign In</button>
   <!--<button mat-menu-item>Help</button>-->
 </mat-menu>
 
