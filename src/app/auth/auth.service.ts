@@ -10,7 +10,7 @@ export class AuthService {
         return this
             .httpClient
             .post('http://localhost:5000/connect/token',
-            'client_id=ro.client&client_secret=secret&grant_type=password&username=test@test.com&password=Abcd@1234&scope=fleetMgmt',
+            'client_id=ro.client&client_secret=secret&grant_type=password&username=test1@test.com&password=Abcd@1234&scope=fleetMgmt',
             {
                 headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
             }
